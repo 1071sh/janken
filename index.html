@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>じゃんけん</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  </head>
+  <body>
+    <main class="main">
+      <div id="content">
+        <div class="intro">勝てば、1点。負ければ-1点。あいこは0点。<br>得点が<span class="intro__strong">3点以上</span>でゲーム終了です。</div>
+        <div class="pchand">
+          <p class="pchand__img"><img id="pchandimg" src="img/janken_gu.png" class="img_janken"></p>
+          <p id="pchand-text">最初はグーで。</p>
+        </div>
+        <div class="myhand">
+          <div class="myhand__list">
+            <img id="gu_btn" src="img/janken_gu.png" class="img_janken gu" alt="グー">
+            <img id="cho_btn" src="img/janken_choki.png" class="img_janken choki" alt="チョキ">
+            <img id="pa_btn" src="img/janken_pa.png" class="img_janken pa" alt="パー">
+          </div>
+          <p class="myhand__text">勝負する手を選んでください。</p>
+        </div>
+        <ul class="table">
+          <li>結果：<span id="judgment"></span></li>
+          <li>勝ち：<span id="win">0</span></li>
+          <li>負け：<span id="lose">0</span></li>
+          <li>あいこ：<span id="draw">0</span></li>
+          <li>試合数：<span id="game">0</span></li>
+          <li>得点：<span id="score" class="score">0</span></li>
+        </ul>
+        <button id="result">結果をみる</button>
+        <button id="reset">最初からやり直す</button>
+      </div>
+      <div id="resultarea" class="resultarea">
+        <h1 class="resultarea__title">結果発表</h1>
+        <p class="rank"><span id="ranktext"></span></p>
+        <button id="restart">もう一回挑戦する</button>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
